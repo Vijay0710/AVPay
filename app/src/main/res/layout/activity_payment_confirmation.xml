@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_image"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context=".PaymentConfirmation"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Are you sure?"
+        android:textColor="#A3E8BF"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        android:background="@drawable/ic_background_recycler_view">
+
+    <ImageView
+        android:id="@+id/userProfile"
+        android:layout_width="140dp"
+        android:layout_gravity="center"
+        android:layout_height="150dp"
+        android:padding="12dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/iron_main"
+        />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+            <TextView
+                android:id="@+id/currentUserName"
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Iron Man"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+            <TextView
+                android:layout_marginTop="15dp"
+                android:id="@+id/AmountToTransfer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$ 20"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:id="@+id/PaymentRefID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Payment ID: "
+                android:visibility="gone"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="174dp"
+        android:layout_height="175dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_down_arrow" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:background="@drawable/ic_background_recycler_view">
+
+        <ImageView
+            android:id="@+id/selectedUserProfile"
+            android:layout_width="140dp"
+            android:layout_gravity="center"
+            android:layout_height="150dp"
+            android:padding="12dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/natasha"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+            <TextView
+                android:id="@+id/selectedUserName"
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Natasha"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+            <TextView
+                android:layout_marginTop="15dp"
+                android:id="@+id/AmountToTransferSelectedUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$ 20"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:id="@+id/PaymentRefID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Payment ID: "
+                android:textAlignment="center"
+                android:visibility="gone"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                tools:ignore="DuplicateIds" />
+        </LinearLayout>
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CANCEL"
+            android:backgroundTint="#FF0000"
+            android:background="@drawable/round_button_payment_conformation"/>
+        <Button
+            android:id="@+id/btnpay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:text="PAY"
+            android:backgroundTint="#00FF00"
+            android:background="@drawable/round_button_payment_conformation"/>
+    </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
